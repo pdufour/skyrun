@@ -3,7 +3,8 @@
   "description": "Skyrun is a small utility library to assist running local scripts on remote servers. Skyrun logs in to remote hosts via SSH.",
   "main": "./index",
   "author": {
-    "name": "Coen Hyde"
+    "name": "Coen Hyde",
+    "url" : "http://coenhyde.com/"
   },
   "version": "0.1.0",
   "repository": {
