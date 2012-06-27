@@ -1,6 +1,6 @@
 {
   "name": "skyrun",
-  "description": "Runs scripts on remote servers",
+  "description": "Skyrun is a small utility library to assist running local scripts on remote servers. Skyrun logs in to remote hosts via SSH.",
   "main": "./index",
   "author": {
     "name": "Coen Hyde"
