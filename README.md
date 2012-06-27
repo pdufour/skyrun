@@ -3,6 +3,11 @@ Skyrun
 
 Skyrun is a small node.js utility library to assist running local scripts on remote servers. With Skyrun you can log into a remote server and run a script of any kind (such as bash, node, python etc. Just provide the appropriate hash bang).
 
+Installing Skyrun
+-----------------
+
+	npm install skyrun
+
 Using Skyrun
 ------------
 
