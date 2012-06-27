@@ -39,23 +39,29 @@ var skyrun = require('../lib/skyrun');
 var should = require('should');
 
 var options = {
-  'identity':process.env.HOME+'/.ssh/id_rsa',
+  'identity':'path/to/private/key',
   'host':'127.0.0.1',
-  'user':process.env.USER
+  'user':'bob'
 };
 
 describe('Skyrun', function() {
   it('should correctly generate identification arguments', function(done) {
     var server = skyrun.createServer(options);
     
-    server.formatIdentity(options).should.eql ['-i', options['identity']];
+    server.formatIdentity(options).should.eql(['-i', 'path/to/private/key']);
     done();
   });
   
   it('should correctly generate host destination arguments', function(done) {
     var server = skyrun.createServer(options);
     
-    server.formatDestination(options).should.eql [options['user']+'@'+options['host']];
+    server.formatDestination(options).should.eql(['bob@127.0.0.1']);
+    done();
+  });
+  
+  it('should correctly generate host destination arguments without user', function(done) {
+    var server = skyrun.createServer(options);
+    server.formatDestination({'host':'127.0.0.1'}).should.eql(['root@127.0.0.1']);
     done();
   });
   
