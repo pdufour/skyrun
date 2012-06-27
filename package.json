@@ -1,0 +1,38 @@
+{
+  "name": "skyrun",
+  "description": "Runs scripts on remote servers",
+  "main": "./index",
+  "author": {
+    "name": "Coen Hyde"
+  },
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/coen-hyde/skyrun.git"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "bugs": {
+    "url": "http://github.com/coen-hyde/skyrun/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/coen-hyde/skyrun/raw/master/LICENSE"
+    }
+  ],
+  "dependencies": {
+    "async":"0.1.x",
+    "underscore":"1.3.x"
+  },
+  "devDependencies": {
+    "mockery": "1.1.x",
+    "mocha": "1.2.x",
+    "should":"0.6.x"
+  },
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
