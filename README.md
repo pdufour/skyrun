@@ -6,10 +6,17 @@ Skyrun is a small utility library to assist running local scripts on remote serv
 Installing Skyrun
 -----------------
 
-	npm install skyrun
+To use skyrun on the cli install globally
 
-Using Skyrun
-------------
+	npm install -g skyrun
+
+Using Skyrun from the CLI
+---------------------------
+
+  skyrun user@host path/to/script.sh
+
+Using Skyrun Programmically
+---------------------------
 
 At the moment Skyrun only supports logging into remote hosts via ssh public key authentication. Password authentication via ssh is not supported. 
 

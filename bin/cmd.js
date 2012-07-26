@@ -29,9 +29,6 @@ var hostArgs = argv._[0].split('@');
 if (hostArgs.length > 1) {
   options.user = hostArgs.shift();
 }
-else {
-  // options.user = 
-}
 
 options.host = hostArgs.shift();
 
