@@ -15,7 +15,7 @@
     "test": "make test"
   },
   "bin": {
-    "cmd": "bin/cmd.js"
+    "skyrun": "bin/cmd.js"
   },
   "bugs": {
     "url": "http://github.com/coen-hyde/skyrun/issues"
@@ -29,8 +29,7 @@
   "dependencies": {
     "async": "0.1.x",
     "underscore": "1.3.x",
-    "commander": "1.0.x",
-    "optimist": "~0.3.4"
+    "optimist": "0.3.x"
   },
   "devDependencies": {
     "mockery": "1.1.x",

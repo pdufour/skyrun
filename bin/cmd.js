@@ -46,5 +46,7 @@ server.on('stderr', function(data) {
 });
 
 server.run(script, function(stderr, stdout) {
-	
+  if (stderr instanceof Error) {
+    process.stderr.write(stderr.message);
+  }
 });
