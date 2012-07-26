@@ -61,7 +61,7 @@ describe('Skyrun', function() {
   
   it('should correctly generate host destination arguments without user', function(done) {
     var server = skyrun.createServer(options);
-    server.formatDestination({'host':'127.0.0.1'}).should.eql(['root@127.0.0.1']);
+    server.formatDestination({'host':'127.0.0.1','user':'root'}).should.eql(['root@127.0.0.1']);
     done();
   });
   
