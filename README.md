@@ -6,14 +6,16 @@ Skyrun is a small utility library to assist running local scripts on remote serv
 Installing Skyrun
 -----------------
 
-To use skyrun on the cli install globally
+To use skyrun from the cli, install skynet globally
 
 	npm install -g skyrun
 
 Using Skyrun from the CLI
 ---------------------------
 
-  skyrun user@host path/to/script.sh
+eg 
+
+	skyrun user@host path/to/script.sh
 
 Using Skyrun Programmically
 ---------------------------
