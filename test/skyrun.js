@@ -75,7 +75,7 @@ describe('Skyrun', function() {
       child.emit('exit', 0);
     });
     
-    server.run('./test/testscript.sh', function(stderr, stdout) {
+    server.run('./test/scripts/basic.sh', function(stderr, stdout) {
       should.not.exist(stderr);
       // Trim output
       stdout = stdout.replace(/^\s+|\s+$/g, '');
@@ -95,7 +95,7 @@ describe('Skyrun', function() {
       child.emit('exit', 1);
     });
     
-    server.run('./test/testscript.sh', function(stderr, stdout) {
+    server.run('./test/scripts/basic.sh', function(stderr, stdout) {
       should.exist(stderr);
       stderr.code.should.eql(1);
       stderr.error.should.eql("Something fucked up happened");
