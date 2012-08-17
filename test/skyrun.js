@@ -85,6 +85,22 @@ describe('Skyrun', function() {
     });
   });
   
+  it('should login and execute script even if stderr has output but exit was clean', function(done) {
+    var server = skyrun.createServer(options);
+    
+    server.on('spawn', function(child) {
+      should.exist(child);
+  
+      child.stderr.emit('data', "WARNINGS!\n");
+      child.emit('exit', 0);
+    });
+    
+    server.run('./test/scripts/basic.sh', function(err, stdout) {
+      should.not.exist(err);
+      done();
+    });
+  });
+  
   it('should return error if script does not exit as expected', function(done) {
     var server = skyrun.createServer(options);
     
@@ -102,4 +118,5 @@ describe('Skyrun', function() {
       done();
     });
   });
+  
 });
