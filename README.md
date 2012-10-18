@@ -33,9 +33,13 @@ var options = {
 	
 var server = skyrun.createServer(options);
 	
-server.run('local/path/to/myscript.sh', function(stderr, stdout) {
-	if (stderr) {
-		// There was an error running the script
+server.run('local/path/to/myscript.sh', function(err, stderr, stdout) {
+	if (err) {
+		if (typeof(err['code']) !== 'undefined' && err['code'] === 1) {
+			// There was an error running the script
+		} else {
+			// There was an attempting to run the script. Possibly a network or authentication problem.
+		}
 	}
 	else {
 		// No error. have a look in stdout to see the output of the script

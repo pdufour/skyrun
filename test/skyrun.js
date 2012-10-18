@@ -113,7 +113,7 @@ describe('Skyrun', function() {
     
     server.run('./test/scripts/basic.sh', function(err, stderr, stdout) {
       should.exist(err);
-      err.message.should.equal('1');
+      err.code.should.equal(1);
       stderr.should.eql("Something fucked up happened");
       done();
     });
